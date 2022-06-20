@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/1.webp");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    /*vh stands for viewport height and vw is for viewport width.
+    Hence, setting an element to a width value of 50vw means that the element will have a width that's 50% of the viewport size,
+    and this stays true when the viewport is resized.*/
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; /*Horizontal Axis*/
+    align-items: center; /*Verticle Axis*/
+}
+#board{
+    background: linear-gradient(rgb(22, 22, 34), rgb(13, 11, 54));
+    width : 90vmin; /*Smallest value in vh and vw is vmin*/
+    height: 92vmin;
+    border: 8px solid rgb(46, 16, 16);
+    display: grid;
+    grid-template-rows: repeat(18, 1fr); /*Column/Rows takes up one fraction unit of the remaining space.*/
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.food{
+    background-color: rgb(77, 186, 219);
+    border: 2px solid rgb(23, 135, 163);
+    border-radius: 50px;
+}
+
+.head{
+    background-color: rgb(192, 15, 148);
+    border: 2px solid rgb(23, 135, 163);
+    border-radius: 10px;
+}
+.tail{
+    background-color: rgb(200, 21, 216);
+    border: 2px solid rgb(23, 135, 163);
+}
